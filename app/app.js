@@ -5,7 +5,8 @@
   angular
     .module('moviecat', [
       'ngRoute',
-      'moviecat.home_page'
+      'moviecat.jsonp',
+      'moviecat.in_theaters'
     ]);
 
 })(angular);
