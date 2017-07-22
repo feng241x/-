@@ -18,14 +18,8 @@
                 <button ng-click="search()">搜索</button>
             </div>
         </div>
-        <nav class="nav">
-            <ul>
-                <!--li中添加 active 类样式，显示焦点状态。-->
-                <li class="active"><a href="#/home_page">首页</a></li>
-                <li><a href="#/in_theaters">正在热映</a></li>
-                <li><a href="#/coming_soon">即将上映</a></li>
-                <li><a href="#/top250">Top250</a></li>
-            </ul>
+        <nav class="nav" menu-Active>
+            <!-- 自定义指令获取  -->
         </nav>
     </div>
     <!-- 顶部导航栏结束 -->
@@ -64,6 +58,8 @@
     <script src="./details/controller.js"></script>
     <!-- 子模块: 搜索模块  -->
     <script src="./search/controller.js"></script>
+    <!-- 子模块: 自定义指令实现导航栏  -->
+    <script src="./common/directives/menuActive.js"></script>
 </body>
 
 </html>

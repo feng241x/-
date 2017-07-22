@@ -34,7 +34,6 @@
 
       var url = 'https://api.douban.com/v2/movie/' + $routeParams.movieType;
       jsonpSrv.jsonp(url, paramObj, function (data) {
-        console.log(data);
         $scope.data = data;
         $scope.MaxPage = Math.ceil(data.total / PAGESIZE)
         $scope.isLoading = false;

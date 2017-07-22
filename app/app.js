@@ -7,8 +7,10 @@
       'ngRoute',
       'moviecat.jsonp',
       'moviecat.details',
+      'moviecat.home_page',
       'moviecat.movielist',
-      'moviecat.search'
+      'moviecat.search',
+      'moviecat.menuActive'
     ]);
 
 })(angular);
