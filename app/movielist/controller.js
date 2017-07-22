@@ -17,7 +17,8 @@
       $scope.page = page;
       var paramObj = {
         start: (page - 1) * PAGESIZE,
-        count: PAGESIZE
+        count: PAGESIZE,
+        q: $routeParams.q
       }
       $scope.goPage = function (page) {
         if (page < 1 || page > $scope.MaxPage) {

@@ -11,11 +11,11 @@
 <body ng-app="moviecat">
     <!-- 顶部导航栏开始 -->
     <div class="top">
-        <div class="header">
+        <div class="header" ng-controller="SearchController">
             <a href="#/home_page"><img src="assets/img/logo.png" alt=""></a>
             <div class="search">
-                <input class="my-input" type="text" placeholder="电影搜索">
-                <button>搜索</button>
+                <input class="my-input" type="text" placeholder="电影搜索" ng-model="searchText">
+                <button ng-click="search()">搜索</button>
             </div>
         </div>
         <nav class="nav">
@@ -60,6 +60,8 @@
     <script src="./movielist/controller.js"></script>
     <!-- 子模块: 电影详情模块  -->
     <script src="./details/controller.js"></script>
+    <!-- 子模块: 搜索模块  -->
+    <script src="./search/controller.js"></script>
 </body>
 
 </html>
