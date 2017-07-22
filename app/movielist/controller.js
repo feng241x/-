@@ -1,15 +1,15 @@
 (function (angular) {
   'use strict'
   angular
-    .module('moviecat.coming_soon', [])
+    .module('moviecat.movielist', [])
     .config(['$routeProvider', function ($routeProvider) {
       $routeProvider
-        .when('/coming_soon/:curPage?', {
-          templateUrl: './coming_soon/view.html',
-          controller: 'coming_soonController'
+        .when('/:movieType/:curPage?', {
+          templateUrl: './movielist/view.html',
+          controller: 'movielistController'
         })
     }])
-    .controller('coming_soonController', ['$scope', '$routeParams', '$route', 'jsonpSrv', function ($scope, $routeParams, $route, jsonpSrv) {
+    .controller('movielistController', ['$scope', '$routeParams', '$route', 'jsonpSrv', function ($scope, $routeParams, $route, jsonpSrv) {
       // 实现分页功能
       var PAGESIZE = 5,
         page = 0; //当前页
@@ -30,7 +30,7 @@
       // 当前页开始索引 = (当前页 - 1) * 每页数量
       // start = (page - 1) * PAGESIZE
 
-      var url = 'https://api.douban.com/v2/movie/coming_soon';
+      var url = 'https://api.douban.com/v2/movie/' + $routeParams.movieType;
       jsonpSrv.jsonp(url, paramObj, function (data) {
         console.log(data);
         $scope.data = data;

@@ -6,9 +6,7 @@
     .module('moviecat', [
       'ngRoute',
       'moviecat.jsonp',
-      'moviecat.in_theaters',
-      'moviecat.coming_soon',
-      'moviecat.top250'
+      'moviecat.movielist'
     ]);
 
 })(angular);
