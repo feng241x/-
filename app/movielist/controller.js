@@ -11,6 +11,7 @@
     }])
     .controller('movielistController', ['$scope', '$routeParams', '$route', 'jsonpSrv', function ($scope, $routeParams, $route, jsonpSrv) {
       // 实现分页功能
+      $scope.isLoading = true;
       var PAGESIZE = 5,
         page = 0; //当前页
       page = $routeParams.curPage || 1;
@@ -36,6 +37,7 @@
         console.log(data);
         $scope.data = data;
         $scope.MaxPage = Math.ceil(data.total / PAGESIZE)
+        $scope.isLoading = false;
         // 非angular自身的代码 不会触发脏值检查机制 需要手动调用 $apply() 方法 手动触发脏值检查机制
         $scope.$apply();
       })
