@@ -6,6 +6,7 @@
     .module('moviecat', [
       'ngRoute',
       'moviecat.jsonp',
+      'moviecat.details',
       'moviecat.movielist'
     ]);
 

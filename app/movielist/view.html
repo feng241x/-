@@ -2,7 +2,7 @@
         <div class="list">
             <ul>
                 <li ng-repeat="list in data.subjects track by $index">
-                    <a href="#/details">
+                    <a href="#/details/{{list.id}}">
                         <img ng-src="{{list.images.large}}" alt="">
                     </a>
                     <div class="meta">
